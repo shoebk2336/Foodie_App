@@ -1,6 +1,6 @@
 import { faStar } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome"
-import { Image, StyleSheet, Text, View } from "react-native"
+import { Image, Pressable, StyleSheet, Text, View } from "react-native"
 
 
 
@@ -8,7 +8,8 @@ import { Image, StyleSheet, Text, View } from "react-native"
 export const MenuCard=()=>{
 
     return(
-        <View
+        <Pressable
+        onPress={()=>alert('clicked')}
         style={Styles.container}
         >
         <Image source={{uri:"https://yt3.googleusercontent.com/-CFTJHU7fEWb7BYEb6Jh9gm1EpetvVGQqtof0Rbh-VQRIznYYKJxCaqv_9HeBcmJmIsp2vOO9JU=s900-c-k-c0x00ffffff-no-rj"}}
@@ -34,7 +35,7 @@ export const MenuCard=()=>{
             </Text>
             </View>
         </View>
-        </View>
+        </Pressable>
     )
 }
 
@@ -48,7 +49,8 @@ const Styles=StyleSheet.create({
         justifyContent:"center",
         shadowColor:"#000",
         borderRadius:16,
-        padding:12
+        padding:12,
+       
         
 
 
@@ -60,5 +62,5 @@ const Styles=StyleSheet.create({
         fontSize:15,
         fontWeight:'500',
         alignItems:"center",
-            }
+        }
 })
